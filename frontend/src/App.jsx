@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import io from 'socket.io-client'
-import {v4 as uuidv4} from 'uuid'
+import io from 'socket.io-client';
+import {v4 as uuidv4} from 'uuid';
 
 
 function App() {
 
   const port = 5000 ;
-  const socket = io(`localhost:${port}`)
+  const socket = io(`localhost:${port}`);
 
   const [info, setInfo] = useState({ name: "", age: "", score: "" }); 
   const [allInfos, setAllInfos] = useState([]) ;
